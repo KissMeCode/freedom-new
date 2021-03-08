@@ -7,7 +7,7 @@ body {
 }
 
 body {
-  width: 100%;
+  width: 100vh;
   height: 100vh;
   background: url('assets/freedom.jpg') no-repeat center;
   background-size: cover;
@@ -15,19 +15,120 @@ body {
 }
 
 .wrapper {
-  padding-top: 4rem;
-  width: 90%;
+ 
+  width: 70%;
   margin: 0 auto;
   text-align: center;
+  align-items: center;
+  position: relative;
+   top: 30%;
 }
 
 .quote {
-  font-family: 'Julius Sans One', sans-serif;
-  font-size: 2.5rem; 
+  font-family: 'Courier New', sans-serif;
+  font-size: 2.5 rem; 
+  text-transform: uppercase;
 }
 
 .author {
-  font-family: 'Crimson Text', serif;
-  font-size: 1.5rem;
-  font-style: italic;
+  font-family: 'Courier New', serif;
+  font-size: 1.5 rem;
+}
+
+
+/* Navbar */
+
+
+ul {
+  list-style-type: none;
+  margin: 0.6 rem;
+  padding: 50;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  font-weight: bold;
+  text-decoration: none;
+
+ 
+}
+
+nav a:link {
+  background-color: white;
+   padding: 0.5rem;
+  border-radius: 10%;
+  color: black;
+  font-family: 'Courier New', serif;
+  font-weight: bold;
+}
+
+nav a:visited {
+  color: grey;
+  font-family: 'Courier New', serif;
+  font-weight: bold;
+}
+
+nav a:active {
+  color: #333;
+  font-family: 'Courier New', serif;
+  font-weight: bold;
+}
+
+nav li {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+nav li:nth-child(4) {
+  border: none;
+}
+
+nav a.active {
+  background-color: #5D5D5D;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 10%;
+}
+
+/* Responsive */
+
+@media (orientation: landscape) {
+  body {
+    font-size: 2vh;
+  }
+  .wrapper {
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .quote {
+    font-size: 120%;
+  }
+  .author {
+    font-size: 80%;
+  }
+  nav li {
+    font-size: 80%;
+  }
+  .wrapper {
+    top: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote {
+    font-size: 200%;
+  }
+  .author {
+    font-size: 150%;
+  }
+  nav li {
+    font-size: 150%;
+  }
+  .wrapper {
+    top: 30%;
+  }
 }
